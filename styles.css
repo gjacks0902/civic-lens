@@ -112,16 +112,17 @@ header{
 }
 header h1{
   font-size: 3em;
-  padding: 30px;
+  padding: 40px;
   padding-bottom: 15px;
   font-weight: 400;
 }
 .tagline{
   font-size: 0.85rem;
-  padding-left: 30px;
+  padding-left: 40px;
+  padding-bottom: 8px;
 }
 .mobile-nav{
-  padding-left: 30px;
+  padding-left: 40px;
   padding-bottom: 20px;
 }
 .menu{
@@ -145,10 +146,122 @@ header h1{
   align-self: center;
 }
 
-
 /* ///ADD/// Global Layout Styles */
+main{
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 0 auto;
+}
+#welcome h2{
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+#welcome p{
+  line-height: 120%;
+  font-size: medium;
+}
+#welcome blockquote{
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+#breaking-news h2{
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+#breaking-news{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.fed-vid, .voter-vid{
+  max-width: 100%;
+  display: inline-block;
+  margin-top: 0;
+}
+#federal{
+  grid-column: 1 / 2;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--truth-text);
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  padding: 10px;
+}
+#voter{
+  grid-column: 2 / 2;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--truth-text);
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  padding: 10px;
+}
+#federal h3, #voter h3{
+  font-size: 1.3rem;
+  font-weight: 300;
+  border-bottom: 1px solid var(--watchdog-white);
+  padding: 10px 0px;
+  line-height: 120%;
+}
+#federal p, #voter p{
+  font-size: 1rem;
+  padding: 5px 0px;
+  line-height: 120%;
+  font-weight: 300;
+}
+
+
+
+footer{
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  padding: 30px;
+}
+footer h2{
+  font-size: 1.5rem;
+  margin: 10px;
+  font-weight: 500;
+}
+footer a{
+  text-decoration: none;
+  color: var(--watchdog-white);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.socials{
+  display: grid;
+  grid-template-columns: repeat(5, fit-content(150px));
+  grid-gap: 15px;
+  margin: 10px;
+}
+.socials li{
+  border: 1px solid var(--news-flash);
+  background-color: var(--news-flash);
+  padding: 10px;
+  font-size: 0.8rem;
+  align-self: center;
+  text-align: center;
+}
+.copy{
+  text-align: center;
+  padding-top: 15px;
+}
 
 /* ///ADD/// Global Text Styles */
+main h2, main h3{
+  font-family: var(--font-heading);
+}
+main p {
+  font-family: var(--font-body);
+}
+main{
+  color: var(--truth-text);
+}
 
 
 /* ///ADD/// medium styles 620px */
