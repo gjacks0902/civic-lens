@@ -141,42 +141,60 @@
         </div>
       </section>
         
-        
-      <h2>Stay Informed. Stay Empowered.</h2>
+      <section class="empowered-form">
+      <h2 class="form-header">Stay Informed. Stay Empowered.</h2>
         <p>Receive text messages with the news you want to know.</p>
 
       <form method="https://wp.zybooks.com/form-viewer.php" action="POST" target="_blank">
-        <label for="your-name">Name</label>
-        <input type="text" id="your-name" name="your-name">
+        <section class="top-section">
+        <section class="name-group">
+          <label for="your-name">Name</label>
+          <input type="text" id="your-name" name="your-name">
+        </section>
 
-        <label for="phone">Mobile</label>
-        <input type="tel" id="phone" name="phone">
-       
-        <fieldset>
+        <section class="phone-group">
+          <label for="phone">Mobile</label>
+          <input type="tel" id="phone" name="phone">
+        </section>
+        </section>
+
+        <fieldset class="notification">
           <legend>Notification Preferences</legend>
-          <input type="checkbox" id="news" name="pref" value="news">
-          <label for="news">Breaking News</label>
-
-          <input type="checkbox" id="politics" name="pref" value="politics">
-          <label for="politics">Politics</label>
-
-          <input type="checkbox" id="weather" name="pref" value="weather">
-          <label for="weather">Weather</label>
-
-          <input type="checkbox" id="sports" name="pref" value="sports">
-          <label for="sports">Sports</label>
-
-          <input type="checkbox" id="enter" name="pref" value="enter">
-          <label for="enter">Entertainment</label>
-
-          <input type="checkbox" id="world" name="pref" value="world">
-          <label for="world">World</label>
-
-          <input type="checkbox" id="financial" name="pref" value="financial">
-          <label for="financial">Financial</label>
-
-          <input type="submit" id="subscribe" name="subscribe" value="Subscribe">
+          <div class="checkbox-section">
+            <div>
+              <input type="checkbox" id="news" name="pref" value="news">
+              <label for="news">Breaking News</label>
+            </div>
+            <div>
+              <input type="checkbox" id="politics" name="pref" value="politics">
+              <label for="politics">Politics</label>
+            </div>
+            <div>
+              <input type="checkbox" id="weather" name="pref" value="weather">
+              <label for="weather">Weather</label>
+            </div>
+            <div>
+              <input type="checkbox" id="sports" name="pref" value="sports">
+              <label for="sports">Sports</label>
+            </div>
+            <div>
+              <input type="checkbox" id="enter" name="pref" value="enter">
+              <label for="enter">Entertainment</label>
+            </div>
+            <div>
+              <input type="checkbox" id="world" name="pref" value="world">
+              <label for="world">World</label>
+            </div>
+            <div>
+              <input type="checkbox" id="financial" name="pref" value="financial">
+              <label for="financial">Financial</label>
+            </div>
+          </div>
         </fieldset>
+
+        <input type="submit" id="subscribe" name="subscribe" value="Subscribe">
+        
+        </section>
       </form>
       </main>
 

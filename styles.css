@@ -168,8 +168,8 @@ main{
   font-size: 1.1rem;
   font-weight: 600;
 }
-#breaking-news h2, .articles{
-  font-size: 1.5rem;
+#breaking-news h2, .articles, .form-header{
+  font-size: 1.4rem;
   font-weight: 400;
 }
 #breaking-news{
@@ -281,12 +281,80 @@ main{
   box-shadow: var(--shadow);
   padding: 20px;
 }
-
-
-
-
-
-
+.form-header{
+  padding-bottom: 5px;
+}
+.empowered-form p{
+  padding-bottom: 5px;
+}
+form{
+  border: 1px solid var(--truth-text);
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  padding: 20px;
+  gap: 16px; 
+  font-size: 0.9rem;
+  margin: 10px auto;
+  display: grid;
+  grid-template-areas:
+  "name-section"
+  "mobile-section"
+  "notification-section"
+  "subscribe-section";
+  font-family: var(--font-body);
+  box-shadow: var(--shadow);
+  width: 90%;
+}
+.checkbox-section div{
+  display: flex;
+  align-items: center;
+}
+.checkbox-section label {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  margin-left: 5px;
+  padding: 2px;
+}
+.name-group{
+  grid-area: name-section;
+  margin-bottom: 10px;
+}
+.name-group input, .phone-group input{
+  height: 30px;
+  margin-top: 5px;
+}
+.phone-group{
+  grid-area: mobile-section;
+}
+.checkbox-section{
+  grid-area: notification-section;
+}
+#subscribe{
+  grid-area: subscribe-section;
+}
+#your-name, #phone{
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+}
+form fieldset{
+  border: 1px solid var(--blue-bulletin);
+  margin-top: 10px;
+  padding: 5px;
+}
+legend{
+  text-transform: uppercase;
+  font-family: var(--font-body);
+}
+#subscribe{
+  color: var(--watchdog-white);
+  background-color: var(--blue-bulletin);
+  text-transform: uppercase;
+  height: 40px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
 
 footer{
   background-color: var(--blue-bulletin);
