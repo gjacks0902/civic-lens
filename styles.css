@@ -87,8 +87,64 @@ body.dark-mode {
 }
 
 /* ///ADD/// Skip Link Styles */
+.skip-content-link{
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-content-link:focus{
+  position: static;
+  width: auto;
+  height: auto;
+}
 
 /* ///ADD/// Navigation Styles */
+header{
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  font-family: var(--font-heading);
+}
+.menu-button{
+  visibility: hidden;
+}
+header h1{
+  font-size: 3em;
+  padding: 30px;
+  padding-bottom: 15px;
+  font-weight: 400;
+}
+.tagline{
+  font-size: 0.85rem;
+  padding-left: 30px;
+}
+.mobile-nav{
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+.menu{
+  display: grid;
+  grid-template-columns: repeat(4, fit-content(170px));
+  grid-gap: 15px;
+}
+.menu a{
+  text-decoration: none;
+  color: var(--watchdog-white);
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+.menu li{
+  border: 1px solid var(--news-flash);
+  background-color: var(--news-flash);
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 10px;
+  align-self: center;
+}
+
 
 /* ///ADD/// Global Layout Styles */
 
