@@ -107,8 +107,6 @@ header{
   color: var(--watchdog-white);
   font-family: var(--font-heading);
 }
-/*FIX ME !!!!ADD MENU BUTTON*/
-
 .menu-button:checked{
   background-color: var(--news-flash);
 }
@@ -128,11 +126,11 @@ header h1{
 }
 .mobile-nav .menu{
   display: none;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  position: absolute;
+  top: 100%;
   width: 100%;
   max-width: 400px;
+  z-index: 1000;
 }
 #menu-toggle:checked ~ .menu{
   display: block;
@@ -144,12 +142,17 @@ header h1{
   color: var(--watchdog-white);
   background-color: var(--news-flash);
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
   transition: var(--transition);
+  text-transform: uppercase;
+  font-family: var(--font-body);
 }
 .menu li a:hover{
   background-color: var(--blue-bulletin);
   transform: scale(1.02);
+}
+.menu li{
+  text-align: center;
 }
 .menu-button{
   display: block;
@@ -158,7 +161,8 @@ header h1{
   padding: 12px;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
+  font-family: var(--font-body);
   color: white;
   background-color: var(--news-flash);
   cursor: pointer;
@@ -388,7 +392,6 @@ legend{
   text-transform: uppercase;
   font-family: var(--font-body);
 }
-
 #subscribe{
   color: var(--watchdog-white);
   background-color: var(--blue-bulletin);
@@ -403,7 +406,6 @@ legend{
   color: var(--truth-text);
   transform: scale(1.01);
 }
-
 footer{
   background-color: var(--blue-bulletin);
   color: var(--watchdog-white);
@@ -414,7 +416,6 @@ footer h2{
   margin: 10px;
   font-weight: 500;
 }
-
 footer a{
   text-decoration: none;
   color: var(--watchdog-white);
@@ -515,32 +516,26 @@ main p {
     width: 100%;
     margin-top: 10px;
   }
-  /*FIX ME
-  .menu-button{
-    display: none;
-  }
   .mobile-nav .menu {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: start;
-    gap: 15px;
-    transform: none;
-    width: 100%;
-    padding: 20px 0;
-    
+    display: flex;
+    position: static;
+    background-color: var(--blue-bulletin);
+    max-width: 100%;
+    gap: 12px; 
+    margin-left: 80px;
   }
   .menu li a {
-    display: block;
-    background-color: #e54242;
-    color: white;
-    text-decoration: none;
+    background-color: var(--news-flash);
     text-transform: uppercase;
-    font-weight: bold;
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 0.9rem;
     white-space: nowrap;
+    font-weight: 600;
+    font-family: var(--font-body);
   }
-    */
+  .menu-button {
+    display: none;
+  }
 }
 
 /* large styles 920px */
@@ -603,19 +598,6 @@ main p {
     --watchdog-white: #333;
     --truth-text: #F1FAEE;
   }
-  .article-container div {
-    background-color: #121212 !important;
-    border-color: #333 !important;
-    color: #F1FAEE !important;
-  }
-  .article-container h3 {
-    color: #F1FAEE !important;
-    border-bottom-color: #333 !important;
-  }
-  #federal, #voter, form {
-    background-color: #E63946 !important; 
-    color: #F1FAEE !important;
-  }
 }
 @media (prefers-reduced-motion: reduce){
   *{
@@ -626,6 +608,9 @@ main p {
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
   .mobile-nav:has(#menu-toggle:checked) .menu{
-    dis
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .mobile-nav:has(#menu-toggle:checked) .menu{
+    display: block;
   }
 }
