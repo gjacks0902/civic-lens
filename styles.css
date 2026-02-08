@@ -86,7 +86,7 @@ body.dark-mode {
   cursor: pointer;
 }
 
-/* ///ADD/// Skip Link Styles */
+/*Skip Link Styles */
 .skip-content-link{
   position: absolute;
   left: -1000px;
@@ -101,7 +101,7 @@ body.dark-mode {
   height: auto;
 }
 
-/* ///ADD/// Navigation Styles */
+/*Navigation Styles */
 header{
   background-color: var(--blue-bulletin);
   color: var(--watchdog-white);
@@ -146,6 +146,7 @@ header h1{
   transition: var(--transition);
   text-transform: uppercase;
   font-family: var(--font-body);
+  border: 1px solid var(--news-flash);
 }
 .menu li a:hover{
   background-color: var(--blue-bulletin);
@@ -177,6 +178,8 @@ header h1{
   font-size: 0.85rem;
   padding-left: 40px;
   padding-bottom: 8px;
+  font-style: italic;
+  font-weight: 600;
 }
 /*Global Layout Styles */
 main{
@@ -609,8 +612,6 @@ main p {
 @supports (selector(:has(*))) {
   .mobile-nav:has(#menu-toggle:checked) .menu{
     background-color: rgba(0, 0, 0, 0.05);
-  }
-  .mobile-nav:has(#menu-toggle:checked) .menu{
     display: block;
   }
 }
